@@ -1,5 +1,3 @@
-from importlib.metadata import requires
-import json
 import requests
 import selenium.webdriver
 from selenium.webdriver.common.by import By
