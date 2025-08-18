@@ -9,11 +9,11 @@ class TastyScrapperStrategy(ScrapperStrategy):
         super().__init__()
         self._recipes = {}
 
-    def scrape(self, url: str) -> dict[str, list[str]]:
+    def scrape(self) -> dict[str, list[str]]:
         """Scrape recipes from the Tasty website."""
         with selenium.webdriver.Firefox() as driver:
             # Get all the ingredients
-            driver.get(url)
+            driver.get("https://tasty.co/ingredient")
             ingredient_names = [
                 ingredient.get_attribute("href").split("/")[-1]
                 for ingredient in driver.find_elements(
