@@ -1,11 +1,7 @@
 from ScrapperStrategies.tasty_scrapper_strategy import TastyScrapperStrategy
-from ScrapperStrategies.matthewryle_scrapper_strategy import MatthewRyleScrapperStrategy
 from ScrapperContext.scrapper_context import ScrapperContext
 
-STRATEGIES = {
-    "tasty": ["https://tasty.co/ingredient", TastyScrapperStrategy()],
-    "matthewryle": ["https://matthewryle.com/recipes", MatthewRyleScrapperStrategy()],
-}
+STRATEGIES = {"tasty": TastyScrapperStrategy()}
 
 
 def main():
